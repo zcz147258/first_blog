@@ -1,0 +1,32 @@
+config:
+  jwt:
+    # 加密密钥
+    secret: abcdefg1234567
+    # token有效时长
+    expire: 3600
+    # header 名称
+    header: token
+server:
+  port: 9200
+  max-http-header-size: 10240000
+  tomcat:
+    max-http-post-size: 10240000
+#权限控制
+shiro:
+  web:
+    enabled: false
+spring:
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://47.101.212.62:3307/person_web?characterEncoding=utf8&useSSL=true
+    hikari:
+      max-lifetime: 60000
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
